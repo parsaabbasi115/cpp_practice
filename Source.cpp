@@ -1,70 +1,70 @@
 #include <iostream>
 int main()
 {
-    //coin=100 & 200
-    //cash=1000 & 2000 & 5000 & 10000
+    //coin=$2 & $1 & $0.25 & $0.1 & $0.05 & $0.01  
     //for get number
-    long amount;// change "a" to amount 
-    long s;
+    double amount;
+    double s;
+    int z;
     //start the operation
-    std::cout << "Please enter number" << "\n";
+    std::cout << "Please enter number: ";
     std::cin >> amount;
-    std::cout << "Please wait....";
+    std::cout << "\nPlease wait....\n";
+    //set the precision to 2
+    std::cout.setf(std::ios::fixed);
+    std::cout.precision(2);
     if
-        (amount >= 10000)
+        (amount >= 2.0)
     {
-        s = amount / 10000;
-        std::cout << "\n" << s << "*10000";
-        amount = amount % 10000;//asign directly to "a"
+        s = amount / 2.0;
+        z = (int)s;
+        amount = amount - (2.0 * z);
+        std::cout << " $2.00 Toonies		X	" << z << "	(remaining: $" << amount << ")\n";
     }
     if
-        (amount >= 5000)
+        (amount >= 1.0)
     {
-        s = amount / 5000;
-        std::cout << "\n" << s << "*5000";
-        amount = amount % 5000;
+        s = amount / 1.0;
+        z = (int)s;
+        amount = amount - (1.0 * z);
+        std::cout << " $1.00 Loonies X " << z << " and remaining: " << amount << "\n";
     }
     if
-        (amount >= 2000)
+        (amount >= 0.25)
     {
-        s = amount / 2000;
-        std::cout << "\n" << s << "*2000";
-        amount = amount % 2000;
+        s = amount / 0.25;
+        z = (int)s;
+        amount = amount - (0.25 * z);
+        std::cout << " $0.25 Quarters X " << z << " and remaining: " << amount << "\n";
     }
     if
-        (amount >= 1000)
+        (amount >= 0.1)
     {
-        s = amount / 1000;
-        std::cout << "\n" << s << "*1000";
-        amount = amount % 1000;
+        s = amount / 0.1;
+        z = (int)s;
+        amount = amount - (0.1 * z);
+        std::cout << " $0.1 Dimes X " << z << " and remaining: " << amount << "\n";
     }
     if
-        (amount >= 500)
+        (amount >= 0.05)
     {
-        s = amount / 500;
-        std::cout << "\n" << s << "*500";
-        amount = amount % 500;
+        s = amount / 0.05;
+        z = (int)s;
+        amount = amount - (0.05 * z);
+        std::cout << " $0.05 Nickels X " << z << " and remaining: " << amount << "\n";
     }
     if
-        (amount >= 200)
+        (amount >= 0.01)
     {
-        s = amount / 200;
-        std::cout << "\n" << s << "*200";
-        amount = amount % 200;
+        s = amount / 0.01;
+        z = (int)s;
+        amount = amount - (0.01 * z);
+        if
+            (amount >= 0.005)
+        {
+            amount = 0.0;
+            z++;
+        }
+        std::cout << " $0.01 Pennies X " << z << " and remaining: " << amount << "\n";
     }
-    if
-        (amount >= 100)
-    {
-        s = amount / 100;
-        std::cout << "\n" << s << "*100";
-        amount = amount % 100;
-    }
-    if
-        (amount % 100 > 0)
-    {
-        std::cout << "\n" << amount << "*1";
-        std::cout << "\n" << "Good bye";
-    }
-    else
-            std::cout << "\n" << "its finish" << "\n";
 }
