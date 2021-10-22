@@ -27,7 +27,7 @@ int main()
         s = amount / 1.0;
         z = (int)s;
         amount = amount - (1.0 * z);
-        std::cout << " $1.00 Loonies X " << z << " and remaining: " << amount << "\n";
+        std::cout << " $1.00 Loonies		X	" << z << "	(remaining: $" << amount << ")\n";
     }
     if
         (amount >= 0.25)
@@ -35,7 +35,7 @@ int main()
         s = amount / 0.25;
         z = (int)s;
         amount = amount - (0.25 * z);
-        std::cout << " $0.25 Quarters X " << z << " and remaining: " << amount << "\n";
+        std::cout << " $0.25 Quartes		X	" << z << "	(remaining: $" << amount << ")\n";
     }
     if
         (amount >= 0.1)
@@ -43,7 +43,7 @@ int main()
         s = amount / 0.1;
         z = (int)s;
         amount = amount - (0.1 * z);
-        std::cout << " $0.1 Dimes X " << z << " and remaining: " << amount << "\n";
+        std::cout << " $0.01 Dimes		X	" << z << "	(remaining: $" << amount << ")\n";
     }
     if
         (amount >= 0.05)
@@ -51,7 +51,7 @@ int main()
         s = amount / 0.05;
         z = (int)s;
         amount = amount - (0.05 * z);
-        std::cout << " $0.05 Nickels X " << z << " and remaining: " << amount << "\n";
+        std::cout << " $0.05 Nickels		X	" << z << "	(remaining: $" << amount << ")\n";
     }
     if
         (amount >= 0.01)
@@ -65,6 +65,6 @@ int main()
             amount = 0.0;
             z++;
         }
-        std::cout << " $0.01 Pennies X " << z << " and remaining: " << amount << "\n";
+        std::cout << " $0.01 Pennies		X	" << z << "	(remaining: $" << amount << ")\n";
     }
 }
